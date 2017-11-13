@@ -11,17 +11,27 @@
 # setting up the initial variables
 altitude = 1000    #this is the altitude above the moon(distance from the moon in metres)
 velocity = 0       #the speed at which the lunar lander is moving(starts with 0, neither rising nor falling)
-fuel = 1000		   #this is the amount of fuel left in litres	
+fuel = 1000        #this is the amount of fuel left in litres	
 burn = 0
+OFFSET = 0.15
+GRAVITY = 1.6
 
 while altitude > 0:
-	burn = float(input("Enter fuel to burn (0 - 1000)?"))
-  	if burn < 0:
+    burn = int(input("Enter fuel to burn: "))
+    if burn < 0:
         burn = 0
-    if burn > 1000:
-        burn = 1000
     if burn > fuel:
         burn = fuel
+    if burn < fuel:
+        burn = fuel
 
+    velocity += GRAVITY
+    velocity -= OFFSET*fuel
+    altitude -= velocity
+    fuel -= burn
+    print('Altitude is:' + int(altitude), 'Velocity is: ' + int(velocity) + 'Fuel is: ' + int(fuel))
 
+if velocity <=10:
+    print('Safe Landing, Well done, YOU WIN!')
 else:
+    print('You blasted into the crater of the MOON! YOU LOSE!')
