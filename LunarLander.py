@@ -12,11 +12,11 @@ def play():
 
     # setting up the initial variables
     altitude = 1000    #this is the altitude above the moon(distance from the moon in metres)
-    velocity = 0       #the speed at which the lunar lander is moving(starts with 0, neither rising nor falling)
+    velocity = 0       #the speed at which the lunar lander is moving(starts with 0, neither rising nor falling and can be negative)
     fuel = 1000        #this is the amount of fuel left in litres	
-    burn = 0
-    OFFSET = 0.15
-    GRAVITY = 1.6
+    burn = 0           #this is the amount the user has chosen to burn           
+    OFFSET = 0.15      #this is the constant that determines how the fuel burnt affects the velocity 
+    GRAVITY = 1.6      #this is the rate at which the force of gravity is pulling the lunar towards the moon  
 
     while altitude > 0:
         burn = int(input("Enter fuel to burn: "))
@@ -37,6 +37,7 @@ def play():
         print('Altitude is: ' + str(altitude) + '  Velocity is: ' + str(velocity) + '  Fuel is: ' + str(fuel))
         print('Safe Landing, Well done, YOU WIN!')
     else:
+        print('Altitude is: ' + str(altitude) + '  Velocity is: ' + str(velocity) + '  Fuel is: ' + str(fuel))
         print('You blasted into the crater of the MOON! YOU LOSE!')
 play()
 
