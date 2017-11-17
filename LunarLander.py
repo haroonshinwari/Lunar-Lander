@@ -43,7 +43,7 @@ play()
 
 #while loop requesting if the player wants to play again
 while True:
-    answer = input('Would you like to play again? ')
+    answer = input('Would you like to play again? (Please enter Y or y if yes and type N or n if no): >')
     if answer == 'Y' or answer == 'y':
         play()
     elif answer == 'N' or answer == 'n':
