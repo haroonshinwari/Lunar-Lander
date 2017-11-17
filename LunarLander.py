@@ -6,7 +6,9 @@
    the game begins with you in the air being pulled towards the moon by gravity -
    and you decide every turn how much fuel to burn which slows down your speed-
    In order to land safely you have to burn the right amount of fuel at the right time-
-   Then your description of what the program does.'''
+   '''
+
+print('Hi, welcome to my first game on Python, The Lunar Lander.\nThis is a fairly simple game. You are on a lunar lander about to land on the moon.\nYou start off 1000m of altitude above the moon with 1000 litres of fuel.\nGravity is a force that acts on you, increasing the velocity in the direction of the moon.\nYou must decide how much fuel to burn at each turn, which will slow down your velocity.\nThe aim of the game is to land safely on the moon without burning all your fuel.\nThis can only be done by reaching an altitude of 0 or less at a velocity of 10m/s or less. \nGOOD LUCK !!! ')  
 
 def play():
 
@@ -17,8 +19,9 @@ def play():
     burn = 0           #this is the amount the user has chosen to burn           
     OFFSET = 0.15      #this is the constant that determines how the fuel burnt affects the velocity 
     GRAVITY = 1.6      #this is the rate at which the force of gravity is pulling the lunar towards the moon  
-
+    
     while altitude > 0:
+        print('Starting altitude = 0  starting velocity = 1000 starting fuel = 1000')
         burn = int(input("Enter fuel to burn: "))
         if burn <= 0:
             burn = 0
