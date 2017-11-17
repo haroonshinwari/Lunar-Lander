@@ -21,7 +21,7 @@ def play():
     GRAVITY = 1.6      #this is the rate at which the force of gravity is pulling the lunar towards the moon  
 
     print('Starting altitude = 1000  starting velocity = 0 starting fuel = 1000')
-    while altitude > 0:
+    while altitude > 0 and fuel > 0:
         burn = int(input("Enter fuel to burn: "))
         if burn <= 0:
             burn = 0
@@ -35,13 +35,18 @@ def play():
         fuel -= burn
         print('Altitude is: ' + str(altitude) + '  Velocity is: ' + str(velocity) + '  Fuel is: ' + str(fuel))
 
+
     if velocity <=10:
         altitude = 0
-        print('Altitude is: ' + str(altitude) + '  Velocity is: ' + str(velocity) + '  Fuel is: ' + str(fuel))
-        print('Safe Landing, Well done, YOU WIN!')
+        if fuel != 0:
+            print('Altitude is: ' + str(altitude) + '  Velocity is: ' + str(velocity) + '  Fuel is: ' + str(fuel))
+            print('Safe Landing, Well done, YOU WIN!')
     else:
         print('Altitude is: ' + str(altitude) + '  Velocity is: ' + str(velocity) + '  Fuel is: ' + str(fuel))
         print('You blasted into the crater of the MOON! YOU LOSE!')
+    
+    if fuel == 0:
+        print('You have run out of fuel, YOU LOSE!')    
 play()
 
 #while loop requesting if the player wants to play again
