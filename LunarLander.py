@@ -39,6 +39,8 @@ def play():
     else:
         print('You blasted into the crater of the MOON! YOU LOSE!')
 play()
+
+#while loop requesting if the player wants to play again
 while True:
     answer = input('Would you like to play again? ')
     if answer == 'Y' or answer == 'y':
