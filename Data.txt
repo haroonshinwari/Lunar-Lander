@@ -1,5 +1,12 @@
 1.  a list of numbers to enter in order to win the game by landing
     safely:
 
+0 1 0 0 1 1 0 1 2 0 1 3 0 1 4 0 1 5 0 1 6 0 1 7 0 1 8 0 1 9 0 1 10 0 1 11 0 1 12 0 1 20 20 30 10 10 10 10 5 
+
 
 2.  a list of numbers which will cause you to lose the game:
+
+0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 
+
+
+100 500 200 400 [run out of fuel]

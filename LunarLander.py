@@ -17,7 +17,7 @@ def play():
     velocity = 0       #the speed at which the lunar lander is moving(starts with 0, neither rising nor falling and can be negative)
     fuel = 1000        #this is the amount of fuel left in litres	
     burn = 0           #this is the amount the user has chosen to burn           
-    OFFSET = 0.25      #this is the constant that determines how the fuel burnt affects the velocity 
+    OFFSET = 0.35      #this is the constant that determines how the fuel burnt affects the velocity 
     GRAVITY = 1.6      #this is the rate at which the force of gravity is pulling the lunar towards the moon  
 
     print('Starting altitude = 1000  starting velocity = 0 starting fuel = 1000')
